@@ -38,5 +38,5 @@
 		b - File >> Add Local Repository 
 		c - Choose project containing library 
 		d - If the folder deosnot exist in github , click "create a repository"
-			and type name and description
+			and type name 
 	

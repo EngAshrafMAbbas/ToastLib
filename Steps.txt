@@ -1,0 +1,42 @@
+1- Create a new android project
+
+2- After project created ..
+	File >> New >> New Module >> Android Library
+
+3- Set any name for your library and click finish
+
+4- File >> Project Structure >> app >> dependencies >>
+	click (+) >> Module Dependency
+
+5- Choose your library and click finish
+
+6- Now , you can see library added in gradle
+
+7- under library create a new class to write your classes as you want
+
+8- Test your library by writing a code in MainActivity using it
+
+9- Now everything is OK .... we are going to publish our library in JitPack
+
+	1- Config project with JitPack
+		I- in build.gradle(project) , add classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
+
+			dependencies {
+        			classpath 'com.android.tools.build:gradle:3.0.1'
+        			classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
+    			}
+
+		II- in build.gradle(Module:YOUR_LIBRARY) , add the following in the top 
+
+			apply plugin: 'com.android.library'
+			apply plugin: 'com.github.dcendents.android-maven'
+			group='engashraf.dev'
+			version='1.0'
+
+	2- Publish project to github (easily use Github Desktop)
+		a - Open Github Desktop
+		b - File >> Add Local Repository 
+		c - Choose project containing library 
+		d - If the folder deosnot exist in github , click "create a repository"
+			and type name and description
+	
